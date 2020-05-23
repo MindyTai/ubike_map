@@ -89,7 +89,7 @@ export default {
 
       this.cityName[0].districts.find((dist) => {
         if (dist.name === this.select.dist) {
-          this.osmMap.panTo(new L.LatLng(dist.latitude, dist.longitude));
+          this.osmMap.flyTo(new L.LatLng(dist.latitude, dist.longitude), 14);
         }
         return dist.name === this.select.dist;
       });
